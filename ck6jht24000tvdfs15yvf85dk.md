@@ -2,7 +2,7 @@
 
 A few weeks ago, I was working with a team and we noticed that the code review stage was getting slower as more merge requests was created by developers. One bottleneck in the review stage was that members of the team had to run each MR branch locally to test functionality. I decided to take on the task to help make our lives easier by automating the deployment of a review app for every MR opened for the project. The project repository is hosted on Gitlab so by default we used Gitlab-CI as our pipeline tool. To simplify the deployment, I chose **Heroku** because Heroku dyno deployment is simple and using free dynos would be a lot cheaper than other alternatives.
 
-Before this, I've had experience setting up Heroku review apps on Github and the ease of setup was almost plug and play but Heroku doesn't have support for review apps integration with Gitlab for now so it had to be a manual process sadly.
+Before this, I've had experience setting up Heroku review apps on Github and the ease of setup was almost plug and play but Heroku doesn't have support for review apps integration with Gitlab for now so it has to be a custom process sadly.
 
 The first step I took was to plan the format for naming each review app. I decided to use `[projectname]-mr-[MR_ID]`. Since MRs are unique, this was a perfect app name format for Heroku. Based on the chosen naming format, I needed the current Merge Request Id to uniquely name each review app. Gitlab-CI comes with  [predefined environment variables](https://docs.gitlab.com/ee/ci/variables/predefined_variables.html) that come to the rescue in situations like this. After a quick scan I found `CI_MERGE_REQUEST_IID` which was perfect for this use case.
 
