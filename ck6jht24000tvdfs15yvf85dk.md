@@ -1,4 +1,4 @@
-## Deploying Heroku Review Apps on Gitlab.
+## Deploying Gitlab Review Apps with Heroku.
 
 A few weeks ago, I was working with a team and we noticed that the code review stage was getting slower as more merge requests was created by developers. One bottleneck in the review stage was that members of the team had to run each MR branch locally to test functionality. I decided to take on the task to help make our lives easier by automating the deployment of a review app for every MR opened for the project. The project repository is hosted on Gitlab so by default we used Gitlab-CI as our pipeline tool. To simplify the deployment, I chose **Heroku** because Heroku dyno deployment is simple and using free dynos would be a lot cheaper than other alternatives.
 
