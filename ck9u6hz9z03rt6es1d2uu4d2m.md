@@ -84,7 +84,7 @@ integration_test:
       - ( npm run start </dev/null &>/dev/null & )
       - git clone https://gitlab-ci-token:${CI_JOB_TOKEN}@gitlab.com/org-name/api-app
       - cd api-app
-      - npm I
+      - npm i
       - npm run migrate
       - npm run seed
       - ( npm run start </dev/null &>/dev/null & )
