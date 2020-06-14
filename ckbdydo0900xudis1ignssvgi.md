@@ -71,6 +71,7 @@ const startBouncer = async () => {
   bouncerChannel.assertExchange(exchange, 'fanout', {
     durable: false
   });
+
   const publishMessages = (msg) => {
     if (msg) {
       const data = JSON.parse(msg.content.toString());
@@ -79,6 +80,7 @@ const startBouncer = async () => {
       console.log(`Bouncing ${headerType} to consumers`);
       bouncerChannel.publish(exchange, '', Buffer.from(msg.content));
     }
+  }
 
   const thirdPartyChannel = await thirdPartyConnect.createChannel();
   thirdPartyChannel.prefetch(0, false);
