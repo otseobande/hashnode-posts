@@ -65,7 +65,7 @@ This setup is similar to the proxy setup with a small difference, the `proxy_pas
 
 ![Load Balancer.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1592775256752/wM88bQusD.png)
 
-The load balancer can be thought of as a reverse proxy that sends the client's requests to multiple servers. Load balancers help distribute traffic coming from multiple clients to multiple servers to increase latency and help provide server redundancy to help improve the reliability of the application being served. Normal cases involve balancing traffic to multiple servers serving the same version of an application using different load balancing/distribution strategies.  Learn more about load balancing strategies [here](https://kemptechnologies.com/load-balancer/load-balancing-algorithms-techniques/).
+The load balancer can be thought of as a reverse proxy that sends the client's requests to multiple servers. Load balancers help distribute traffic coming from multiple clients to multiple servers to decrease latency and help provide server redundancy to help improve the reliability of the application being served. Normal cases involve balancing traffic to multiple servers serving the same version of an application using different load balancing/distribution strategies.  Learn more about load balancing strategies [here](https://kemptechnologies.com/load-balancer/load-balancing-algorithms-techniques/).
 
 Let's take a look at an Nginx load balancer that distributes traffic to three servers 1.1.1.1, 1.1.1.2, and 1.1.1.3.
 
