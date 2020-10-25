@@ -1,6 +1,6 @@
 ## Building a Serverless URL shortener with AWS SAM and DynamoDB
 
-I've been working closely with software infrastructure for a couple of years and I've gotten to enjoy the raw vibe of having to set up a server for a specific purpose or for a particular software.  I like performing experiments on AWS and have learned to love CloudFormation for configuring infrastructure resources on AWS. 
+I've been working closely with software infrastructure for a couple of years and I've gotten to enjoy the raw vibe of having to set up a server for a specific purpose or for a particular software.  I like performing experiments on AWS and have learned to love using CloudFormation to configure infrastructure resources on AWS. I enjoy the concept of serverless and I've been taking it out for several spins.
 
 For this article, I'll be exploring AWS Lambda functions using the AWS Serverless Application Model (SAM). When I learned about Lambda functions they blew my mind away and its possible applications were very fascinating but I quickly realized that it was hard to manage and deploy the code for lambda functions for a reasonably sized application because of the process of uploading zip files for application code and managing API Gateway configuration for the functions. Luckily, AWS understood this too and created the SAM service to solve this problem. SAM combines the best of Lambda, API Gateway, and CloudFormation together. 
 
