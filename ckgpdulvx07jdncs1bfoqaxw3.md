@@ -224,7 +224,7 @@ exports.shortenUrl = async (event) => {
 Okay, our `shortenUrl` function is good to go!
 
 
-### Redirect to Original URL Function
+### Create the Redirect to Original URL Function
 
 We've been able to register URLs and get IDs mapped to them. Next up we need a function to redirect to the original URLs when a path is visited with that ID. Before we do that, we need to create an index on the ID column on DynamoDB.
 
